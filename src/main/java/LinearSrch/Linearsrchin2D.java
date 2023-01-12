@@ -9,7 +9,7 @@ public class Linearsrchin2D {
                 {44,66,24,78},
                 {66,3,7}
         };
-    int target = 3;
+    int target = 7;
         System.out.println(Arrays.toString(srch(arr, target)));
     }
 
@@ -18,11 +18,10 @@ public class Linearsrchin2D {
         for(int i =0; i < arr.length; i++){
             for (int j = 0; j < arr[i].length; j++) {
                 if(target == arr[i][j]){
-                    a[0] = i;
-                    a[1] = j;
+                   return new int[]{i,j};
                 }
             }
         }
-        return a;
+        return new int[]{-1,-1};
     }
 }
